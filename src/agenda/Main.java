@@ -49,7 +49,7 @@ public class Main {
                     for (int i = 0; i < contactos.size(); i++) {
                         System.out.println(contactos.get(i));
                     }
-                    
+                    System.out.println("Prueba");
                     break;
                 case 3:
                     escribir(contactos);
