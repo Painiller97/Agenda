@@ -36,7 +36,8 @@ public class Main {
             System.out.println("¿Qué quieres hacer?");
             System.out.println("1 - Agregar contacto");
             System.out.println("2 - Ver contactos");
-            System.out.println("3 - Guardar y Salir");
+            System.out.println("3 - Eliminar contacto");
+            System.out.println("4 - Guardar y Salir");
             int opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
@@ -49,13 +50,23 @@ public class Main {
                     for (int i = 0; i < contactos.size(); i++) {
                         System.out.println(contactos.get(i));
                     }
-                    System.out.println("Hola mundo");
-                    System.out.println("Prueba");
                     break;
+                 
                 case 3:
+                    System.out.println("Indique el id del usuario a borrar.");
+                    int indice = sc.nextInt();
+                    if (indice > contactos.size()){
+                        System.out.println("Id erróneo.");
+                    }
+                    else{
+                        contactos.remove(indice);
+                        System.out.println("El contacto ha sido eliminado");                               
+                    }
+                case 4:
                     escribir(contactos);
                     salir=true;
                     break;
+                
             }
         }
     }
