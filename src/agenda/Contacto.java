@@ -16,7 +16,16 @@ import javax.swing.JOptionPane;
 public class Contacto implements Serializable{
     private String nombre;
     private int numero;
-
+    private String direccion;
+    
+    public void setDireccion(String direccion){
+        this.direccion=direccion;
+    }
+    
+    public String getDireccion(){
+        return direccion;
+    }
+    
     public Contacto() {
     }
 
@@ -38,7 +47,7 @@ public class Contacto implements Serializable{
 
     @Override
     public String toString() {
-        return "Contacto{" + "nombre=" + nombre + ", numero=" + numero + '}';
+        return "Contacto{" + "nombre=" + nombre + ", numero=" + numero + ", direccion=" + direccion + '}';
     }
     
     public void agregar(){
